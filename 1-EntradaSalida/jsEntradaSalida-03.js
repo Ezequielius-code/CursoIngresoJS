@@ -5,11 +5,11 @@ function mostrar()
 {
 	let enterName;
 	
-	enterName= document.getElementById("txtIdNombre").value;
+	enterName = document.getElementById("txtIdNombre").value;
 
 	alert(enterName);
 
-	document.getElementById("txtIdNombre").value= "";
+	document.getElementById("txtIdNombre").value = "";
 
 }
 
