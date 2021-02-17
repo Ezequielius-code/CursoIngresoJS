@@ -13,7 +13,7 @@ function mostrar()
 	{
 		if (maritalStatus == "Soltero") 
 		{
-			alert("Usted es soltero y no es menor. \n \n´tás grande eh!");
+			alert("Usted es soltero y no es menor.");
 		}
 	}
 }//FIN DE LA FUNCIÓN

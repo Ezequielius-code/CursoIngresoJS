@@ -1,5 +1,5 @@
 //Brutto, Ezequiel Andrés
-function mostrar()
+/*function mostrar()
 {
 	//tomo la edad  
 	let age;
@@ -22,7 +22,7 @@ function mostrar()
 	     	alert("Usted es un adolescente.");
 	    }
 	} 
-}//FIN DE LA FUNCIÓN
+}FIN DE LA FUNCIÓN*/
 
 /*function mostrar()
 {
@@ -108,3 +108,29 @@ maximo 4
 	
 
 //}//FIN DE LA FUNCIÓN
+
+
+function mostrar()
+{
+	//tomo la edad  
+	let age;
+
+	age = document.getElementById('txtIdEdad').value;
+	age = parseInt(age);
+
+    if(age < 13)
+	{
+		alert("Usted es un niño.");
+	}
+	else
+	{
+		if(age > 17)
+		{
+		 	alert("Usted es mayor de edad.");
+		}
+		else
+	    {
+	     	alert("Usted es un adolescente.");
+	    }
+	} 
+}
