@@ -1,21 +1,49 @@
 /*
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
+//Brutto, Ezequiel Andrés
 function mostrar()
 {	// declarar variables
-	var banderaDelPrimero;
-	var numeroIngresado;
-	var numeroMaximo;
-	var numeroMinimo;
-	var respuesta;
+	var firstNumberCheckpoint;
+	var enteredNumber;
+	var maxNumber;
+	var minNumber;
+	var answer;
 	//iniciar variables
-	banderaDelPrimero="es el primero";
-	respuesta='si';
-	while(respuesta=="si")
+	firstNumberCheckpoint = 0;
+	answer = 's';
+	
+	while(answer == "s")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		enteredNumber = prompt("Por favor, ingrese un número:");
+		enteredNumber = parseInt(enteredNumber);
+
+		while(isNaN(enteredNumber) == true)
+		{
+			enteredNumber = prompt("Por favor, ingrese un número:");
+			enteredNumber = parseInt(enteredNumber);
+		}
+
+		if (firstNumberCheckpoint == 0) 
+		{
+			minNumber = enteredNumber;
+			maxNumber = enteredNumber;
+			firstNumberCheckpoint = 1;
+		}
+		else 
+		{
+			if (enteredNumber < minNumber) 
+			{
+				minNumber = enteredNumber;
+			}
+			if (enteredNumber > maxNumber) 
+			{
+				maxNumber = enteredNumber;
+			}
+		}
+		answer=prompt("¿Desea ingresar más valores? \n Ingrese (s)i para continuar; (n)o para finalizar.");
 	}
-	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	
+	document.getElementById('txtIdMaximo').value = maxNumber;
+	document.getElementById('txtIdMinimo').value = minNumber;
 }//FIN DE LA FUNCIÓN
